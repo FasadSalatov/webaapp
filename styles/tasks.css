@@ -26,11 +26,7 @@ body {
     min-height: 100%;
 }
 
-main {
-    margin-top: 25%;
-    position: relative;
-    min-height: 100%;
-}
+
 
 #avatar {
     margin-left: 5%;
@@ -60,6 +56,23 @@ main {
 
 
 }
+
+.head_box>p{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    min-width: 110px;
+    height: 28px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 8;
+    grid-row: 1;
+    z-index: 1;
+}
+
 
 
 #cc_balance {
@@ -104,127 +117,22 @@ main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     position: relative;
+    z-index: -100;
 }
 
 #asphalt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
     width: 100%;
-    z-index: 0;
       grid-column: 1 / span 8;
       grid-row: 1; 
-      z-index: 1;
       mix-blend-mode: hard-light;
 
 
 }
 
-#fuel {
-    z-index: 1;
-      grid-column: 1 / span 8;
-      grid-row: 1; 
-      z-index: 1;
-      max-width: 154px;
-      margin-top: 5%;
-}
-
-#car {
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
-    z-index: 2;
-    grid-column: 1 / span 8;
-    grid-row: 1; 
-    max-width: 354px;
-    margin-top: 40%;
-}
-
-#btns {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-#race_btn {
-/* Object (2) 2 */
-
-    background: #F0DB20;
-    box-shadow: inset 0px 4px 4.2px rgba(0, 0, 0, 0.69);
-    border-radius: 8px;
-
-
-    color: #000000;
-
-    border: 0.5px solid #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: #F0DB20;
-    border-radius: 9px;
-    width: fit-content;
-    min-height: 61px;
-
-    font-family: 'Londrina Shadow';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.25em;
-    transition: 500ms;
-
-}
-
-#race_btn:active {
-    box-shadow: inset 0px 4px 100px rgba(0, 0, 0, 0.69);
-}
-
-#boost_btn {
-    /* Object (2) 2 */
-
-
-    background: #F0DB20;
-    box-shadow: inset 0px 4px 4.2px rgba(0, 0, 0, 0.69);
-    border-radius: 8px;
-    min-width: 71px;
-    min-height: 51px;
-    margin-left: 15px;
-    border: 0.5px solid #000000;
-    transition: 500ms;
-}
-
-#boost_btn:active {
-    box-shadow: inset 0px 4px 100px rgba(0, 0, 0, 0.69);
-}
-
-#boost_btn>img {
-    width: 39px;
-    height: 39px;
-}
-
-#nitro_btn {
-    /* Object (2) 2 */
-
-
-    background: #F0DB20;
-    box-shadow: inset 0px 4px 4.2px rgba(0, 0, 0, 0.69);
-    border-radius: 8px;
-    min-width: 71px;
-    min-height: 51px;
-    margin-left: 15px;
-    border: 0.5px solid #000000;
-    transition: 500ms;
-
-}
-
-#nitro_btn:active {
-    box-shadow: inset 0px 4px 100px rgba(0, 0, 0, 0.69);
-}
-
-#nitro_btn>img {
-    width: 39px;
-    height: 39px;
-}
 
 .coinDiv {
     display: flex;
@@ -254,13 +162,94 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    max-height: 80px;
     padding-bottom: 10%;
-    margin-top: -80px;
-  }
+    margin-top: 80px;
+    background-color: #000000c2;
+}
 
 .wrapper {
     min-height: 100%;
+}
+
+main {
+    margin-top: 5%;
+    position: relative;
+    min-height: 100%;
+}
+
+.container {
+    position: relative;
+    display:flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 100;
+}
+.req {
+    /* Rectangle 14 */
+display: flex;
+justify-content: center;
+
+
+width: 180px;
+height: 70px;
+
+background: rgba(27, 27, 27, 0.822);
+border: 1px solid #FAFF00;
+border-radius: 4px;
+margin-top: 15px;
+margin-left: 5px;
+
+}
+#go {
+    /* Rectangle 16 */
+width: 42px;
+height: 20;
+background: #D9D9D9;
+border-radius: 5px;
+margin-top: 1px;
+
+}
+.req_contain{
+    display: flex;
+    flex-direction: column;
+}
+#proc_task{
+    /* 0% */
+    margin-top: 4%;
+font-family: 'Londrina Shadow';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 26px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.09em;
+
+color: #FAFF00;
+margin-left: 15%;
+
+
+}
+.req>.req_contain>p {
+    /* Пригласить трёх друзей */
+margin-top: 5%;
+font-family: 'Anek Kannada';
+font-style: normal;
+font-weight: 800;
+font-size: 12px;
+line-height: 20px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.09em;
+width: 110px;
+
+color: #FFFFFF;
+
+
 }
 
 #foot_btns>button {
@@ -294,3 +283,5 @@ transition: 300ms;
 #foot_btns>button:active {
     box-shadow: inset 0px 4px 100px rgba(0, 0, 0, 0.69);
 }
+
+
